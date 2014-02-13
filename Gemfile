@@ -10,7 +10,6 @@ end
 # in production environments by default.
 group :development, :test do
   gem 'sass-rails',   '~> 3.2.3'
-  gem 'uglifier', '>= 1.0.3'
   gem 'sqlite3'
   gem 'annotate', "~> 2.6.1"
   gem 'strong_parameters', '~> 0.2.3'
