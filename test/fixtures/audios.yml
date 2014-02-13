@@ -1,0 +1,32 @@
+# == Schema Information
+#
+# Table name: audios
+#
+#  id          :integer          not null, primary key
+#  title       :string(255)
+#  description :text
+#  author      :string(255)
+#  when        :integer
+#  link        :string(255)
+#  composer    :string(255)
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  description: MyText
+  author: MyString
+  when: 1
+  link: MyString
+  composer: MyString
+
+two:
+  title: MyString
+  description: MyText
+  author: MyString
+  when: 1
+  link: MyString
+  composer: MyString
