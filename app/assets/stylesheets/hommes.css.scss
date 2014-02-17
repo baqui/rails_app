@@ -1,3 +1,227 @@
-// Place all the styles related to the hommes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+html{
+width: 100%;
+height: 100%;
+margin: 0 0 0 0;
+padding: 0 0 0 0;
+}
+ body {
+height: 100%;
+width: 100%;
+overflow: hidden;
+background: black;
+margin: 0 0 0 0;
+padding: 0 0 0 0;
+}
+//definicje kolorów                                                                                      
+$grey: #211F21;
+$white: #FCF8FF;
+//                                                                                         
+nav {
+z-index: 500;
+transition: background-color 0.5s ease;
+}
+.second{ 
+background: $grey;
+z-index: 400;
+}
+.third {
+background: $white;
+z-index: 300;
+}
+//yield from index.html 
+section#yieldContent {
+width: 94%;
+height: 88%;
+background: $grey;
+position: relative;
+top: 6%;
+left: 3%;
+z-index: 700;
+padding: 0 0 0 0;
+margin: 0 0 0 0;
+}                        
+div.imageContainer{
+width: 33.3%;
+height: 100%;
+background: $grey;
+float: left;
+position: relative;
+padding: 0 0 0 0;
+margin: 0 0 0 0;
+}
+
+//opakownie na nieszczesny logo-element
+header{
+position: absolute;
+top: -0.5%;
+left: 34.39%;
+width: 32.52%;
+height: 16.5%;
+min-height: 74px;
+}
+.under{
+position: absolute;
+top: -2%;
+left: 34.39%;
+width: 32.52%;
+height: 16.5%;
+min-height: 74px;
+}
+//zdarzenia hover wykonywane po najechaniu na #hoverLayer 
+  @mixin transition($kierunek, $procent, $czas_tam, $czas_powrot){
+	#{$kierunek}: #{$procent};
+	transition: #{$kierunek} $czas_tam cubic-bezier(.17,0,0,.92) $czas_powrot}
+
+div#hoverLayer:hover~.jeden{
+  @include transition(left, 100%, 0.7s, 0s);
+}
+div#hoverLayer:hover~.dwa{
+  @include transition(top, 100%, 0.7s, 0.5s);
+}
+div#hoverLayer:hover~.trzy{
+  @include transition(left, -100%, 0.7s, 0s);
+}
+div#hoverLayer:hover~.cztery{
+  @include transition(top, -100%, 0.7s, 0.5s);
+}
+
+
+div#hoverLayer:hover~.piec{
+-webkit-transform: matrix(1, 0, 0, 1, 0, -200);
+transition: transform 1s cubic-bezier(.76,.02,.99,.98);
+transition-delay: 0.1s;
+} 
+
+article:nth-of-type(1), article:nth-of-type(3){
+background: red;
+}
+
+footer {
+z-index: 500;
+
+}
+	@mixin pozycja($width, $height, $direction, $direction2, $value, $value2){
+position: absolute;
+width: #{$width};
+height: #{$height};
+#{$direction}: $value;
+#{$direction2}: $value2;
+}
+.bottom{
+@include pozycja(100%, 6%, left, bottom, 0, 0);
+min-height: 42px;
+}
+.upper{
+@include pozycja(100%, 6%, top, left, 0, 0);
+min-height: 42px;
+}
+.right {
+@include pozycja(3%, 100%, top, right, 0, 0);
+min-width: 42px;
+}
+.left {
+@include pozycja(3%, 100%, left, top, 0, 0);
+min-width: 42px;
+}
+
+div#hoverLayer{
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+z-index: 600;
+}
+	@mixin transition_dwa($kierunek, $czas, $delay){
+transition: $kierunek $czas cubic-bezier(.76,.2,.99,.98);
+transition-delay: $delay;
+}
+.jeden{
+@include transition_dwa(left, 0.4s, 0.5s);
+}
+.dwa{
+@include transition_dwa(top, 0.4s, 0s);
+
+}
+.trzy{
+@include transition_dwa(left, 0.4s, 0.5s);
+}
+.cztery{
+@include transition_dwa(top, 0.4s, 0s);
+}
+.piec{
+transition: transform 1s cubic-bezier(.76,.2,.99,.98);
+z-index: 801;
+background: url('logo.png') no-repeat;
+background-size: contain;
+transition-delay: 0.75s;
+}
+.under{
+z-index: 800;
+background: url('logoBlack.png') no-repeat;
+background-size: contain;
+}
+
+/* wnętrze oparte na Ajax*/
+
+//.content{
+//position: relative;
+//}
+//.anchor{
+//position: absolute;
+//width: 100%;
+//height: 100%;
+//}
+//section a {
+//display: block;
+//}
+//.internal {
+//position: absolute;
+//width: 100%;
+//height: 2%;
+//background: plum;
+//transition: height 0.4s cubic-bezier(.76,.02,.99,.98);
+//z-index: 400;
+//}
+//.ba{
+//transition-delay: 0.3s;
+//}
+//.bar{
+//bottom: 0;
+//transition-delay: 0.7s;
+//}
+//.barman{
+//right: 0;
+//transition-delay: 0.9s;
+//}
+//.barka{
+//transition-delay: 0.9s;
+//}
+//.clicked{
+//height: 100%;
+//}
+//.unclicked{
+//width: 3%;
+//height: 100%;
+//transition: width 0.4s cubic-bezier(.76,.02,.99,.98);
+//}
+//.wertykalnie{
+//height: 33.3%;
+//width: 100%;
+//}
+//a {
+//display: block;
+//width: 100%;
+//height: 100%;
+//}
+//img {
+//position: absolute;
+//display: block;
+//max-height: 100%;
+//width: 100%;
+//float: left;
+//}
+
+
+/// style do hommes.index wykorzystanie techniki padding-bottom i @brakepoints
+

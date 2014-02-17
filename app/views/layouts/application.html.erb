@@ -7,8 +7,22 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<!-- konstrukcje tworzące ruchomy layout-->
+<div id="hoverLayer"> </div> <!-- w przyszłośi opakować w spójny kontener, najlepiej section-->
+<header class="piec"></header>
+<div class="under"></div>
+<nav class="upper hov" ></nav>
+<div class="upper second animate jeden" > </div>
+<div class="upper third"></div>
+<div class="left second animate hov dwa"></div>
+<div class="left third"></div>
+<footer class="bottom hov"></footer>
+<div class="bottom second animate trzy"> </div>
+<div class="bottom third"> </div>
+<div class="right second animate hov cztery "></div>
+<div class="right third"></div>
 
+<!-- główna zawartośc strony-->
 <%= yield %>
-
 </body>
 </html>
