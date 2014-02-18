@@ -28,7 +28,7 @@ z-index: 400;
 background: $white;
 z-index: 300;
 }
-//yield from index.html 
+//yield from index.html                     
 section#yieldContent {
 width: 94%;
 height: 88%;
@@ -224,4 +224,52 @@ background-size: contain;
 
 
 /// style do hommes.index wykorzystanie techniki padding-bottom i @brakepoints
+span.imageWraper{
+display: inline-block;
+width: 100%;
+height: 100%;
+font-size: 0;
+line-height: 0;
+vertical-align: middle;
+background-size: 100%;
+background-position: 50% 50%;
+background-repeat: no-repeat;
+}
+span#leftContainer{
+background-image: url("middle-part2.jpg");
+}
+span#middleContainer{
+background-image: url("middle-part.jpg");
+}
+span#rightContainer{
+background-image: url("middle-part3.jpg");
+}
+span.imageInner{
+display: block;
+height: 0;
+padding-bottom: 73.9%; 
+}
+// MEDIA QUERIES, tylko zamiana kolejnośći zdjęć
+@media only screen and (max-width: 320px){ ////////////////////    320px
+span#leftContainer{
+background-image: url("middle-part3.jpg");
+}
+span#middleContainer{
+background-image: url("middle-part2.jpg");
+}
+span#rightContainer{
+background-image: url("middle-part.jpg");
+}
+}
+@media only screen and (max-width: 720px){ /////////////////////   720px
+span#leftContainer{
+background-image: url("middle-part.jpg");
+}
+span#middleContainer{
+background-image: url("middle-part3.jpg");
+}
+span#rightContainer{
+background-image: url("middle-part2.jpg");
+}
+}
 
